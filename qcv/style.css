@@ -1,4 +1,3 @@
-/* ====== General ====== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -49,12 +48,26 @@ a {
 }
 
 .text-lg {
-  font-size: 1.5rem;
+  font-size: 17px;
   font-weight: 400;
 }
 
 .text-xl {
   font-size: 3rem;
+}
+
+.text-gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.text-dark-gray {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.84615385rem;
+  margin: 0.25rem 0 0.25rem 0.5rem;
 }
 
 /* ====== Sidebar ====== */
@@ -113,18 +126,51 @@ a {
   align-items: center;
 }
 
-.personal-info .row {
+.personal-info .row,
+.job-info .row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.personal-info .row .title {
-  font-size: 11px;
+.social-links .links a {
+  text-decoration: none;
+  margin-left: 5px;
+}
+.social-links .links a i {
+  font-size: 20px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 50%;
 }
 
-.personal-info .row .des {
-  font-weight: bold;
+.linkedin {
+  color: #4183c4;
+}
+
+.github {
+  color: #1b1c1d;
+}
+
+.twitter {
+  color: #09c;
+}
+
+.education .items .item {
+  display: flex;
+}
+
+.education .items .item .image img {
+  width: 60px;
+  height: 60px;
+}
+
+.label {
+  background: #e8e8e8;
+  padding: 3px 10px;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  display: inline-block;
 }
 
 .main {
@@ -142,4 +188,74 @@ a {
   color: #00658d;
   font-size: 19px;
   font-weight: 700;
+}
+
+.main-section {
+  margin-bottom: 20px;
+}
+
+.main-section .section-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.main-section .section-header h2 {
+  display: inline-block;
+  border-bottom: 2px solid #ccc;
+}
+
+.job-experiences .items {
+  padding-left: 2rem;
+}
+
+.job-experiences .item {
+  display: flex;
+  margin: 1.5em 0;
+}
+
+.job-experiences .item .content {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.job-experiences .item .content .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-experiences .extra {
+  margin-top: 5px;
+}
+
+.education .items {
+  padding-left: 2rem;
+}
+
+.education .item {
+  margin: 1.5em 0;
+}
+
+.education .item .content {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.education .extra {
+  margin-top: 5px;
+}
+
+.education .label {
+  margin: 0;
+}
+
+.education .item {
+  display: flex;
+}
+
+.education .item .content .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
