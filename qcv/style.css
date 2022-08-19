@@ -65,9 +65,20 @@ a {
 }
 
 .label {
+  display: inline-block;
+  background-color: #e8e8e8;
+  color: rgba(0, 0, 0, 0.6);
   font-weight: bold;
+  border-radius: 0.30769231rem;
   font-size: 0.84615385rem;
   margin: 0.25rem 0 0.25rem 0.5rem;
+  padding: 3px 10px;
+}
+
+.label .details {
+  margin-right: 10px;
+  opacity: 0.8;
+  display: inline-block;
 }
 
 /* ====== Sidebar ====== */
@@ -156,21 +167,26 @@ a {
   color: #09c;
 }
 
-.education .items .item {
+.technical-skills .skills .skill {
   display: flex;
+  margin-bottom: 20px;
 }
 
-.education .items .item .image img {
-  width: 60px;
-  height: 60px;
+.technical-skills .skills .skill .skill-title {
+  width: 100px;
+  text-align: left;
 }
 
-.label {
-  background: #e8e8e8;
-  padding: 3px 10px;
-  color: rgba(0, 0, 0, 0.6);
-  border-radius: 4px;
-  display: inline-block;
+.technical-skills .skills .skill .skill-progress {
+  width:100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+.technical-skills .skills .skill .skill-progress .bar {
+  border-radius: 3px;
+  background: #1bb9b7;
 }
 
 .main {
@@ -203,44 +219,32 @@ a {
   border-bottom: 2px solid #ccc;
 }
 
-.job-experiences .items {
+.job-experiences .items,
+.education .items {
   padding-left: 2rem;
 }
 
-.job-experiences .item {
+.job-experiences .item,
+.education .item {
   display: flex;
   margin: 1.5em 0;
 }
 
-.job-experiences .item .content {
+.job-experiences .item .content,
+.education .item .content {
   padding-right: 20px;
   width: 100%;
 }
 
-.job-experiences .item .content .row {
+.job-experiences .item .content .row,
+.education .item .content .row {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.job-experiences .extra {
-  margin-top: 5px;
-}
-
-.education .items {
-  padding-left: 2rem;
-}
-
-.education .item {
-  margin: 1.5em 0;
-}
-
-.education .item .content {
-  padding-right: 20px;
-  width: 100%;
-}
-
+.job-experiences .extra,
 .education .extra {
   margin-top: 5px;
 }
@@ -249,13 +253,24 @@ a {
   margin: 0;
 }
 
-.education .item {
-  display: flex;
+.skills {
+  padding-left: 2rem;
+  margin-top: 20px;
 }
 
-.education .item .content .row {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.bar {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bar > div {
+  text-align: left;
+  padding-left: 5px;
+}
+
+.other-skills {
+  margin-bottom: 20px;
+}
+
+.other-skills .label {
+  color: #fff;
 }
