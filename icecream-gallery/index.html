@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./tailwind.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       try {
         tailwind.config = {
@@ -42,7 +42,7 @@
       }
     </style>
   </head>
-  <body class="font-vazir bg-gray-400 min-h-[1000px]">
+  <body class="font-vazir">
     <div id="super-header" class="h-2 primary-gradient"></div>
     <header id="header" class="sticky top-0 z-10 bg-white/50">
       <div
@@ -72,5 +72,12 @@
         </div>
       </div>
     </header>
+    <div
+      id="hero-wrapper"
+      class="h-[60vh] min-h-[18rem] flex justify-center bg-[#fff899] relative"
+    >
+      <img src="./images/hero.jpg" id="hero-image" class="h-full w-96 object-cover"/>
+      <img src="./images/wave.svg" id="hero-wave" class="absolute bottom-0 w-full max-h-40"/>
+    </div>
   </body>
 </html>
