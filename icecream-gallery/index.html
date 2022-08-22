@@ -39,10 +39,23 @@
         .primary-gradient {
           @apply bg-gradient-to-l from-pink-500 via-red-500 to-yellow-500;
         }
+
+        .gradient-border {
+          @apply before:primary-gradient relative before:absolute before:w-full before:h-full before:-z-10 before:rounded-md before:transition-transform before:duration-300 before:content-[''] hover:before:scale-105;
+        }
+      }
+
+      @layer components {
+        .ice-cream {
+          @apply gradient-border;
+        }
+        .ice-cream img {
+          @apply w-72 h-60 rounded-md object-cover;
+        }
       }
     </style>
   </head>
-  <body class="font-vazir">
+  <body class="font-vazir bg-gray-400 min-h-[1000px]">
     <div id="super-header" class="h-2 primary-gradient"></div>
     <header id="header" class="sticky top-0 z-10 bg-white/50">
       <div
@@ -76,8 +89,38 @@
       id="hero-wrapper"
       class="h-[60vh] min-h-[18rem] flex justify-center bg-[#fff899] relative"
     >
-      <img src="./images/hero.jpg" id="hero-image" class="h-full w-96 object-cover"/>
-      <img src="./images/wave.svg" id="hero-wave" class="absolute bottom-0 w-full max-h-40"/>
+      <img
+        src="./images/hero.jpg"
+        id="hero-image"
+        class="h-full w-96 object-cover"
+      />
+      <img
+        src="./images/wave.svg"
+        id="hero-wave"
+        class="absolute bottom-0 w-full max-h-40"
+      />
     </div>
+    <main
+      class="max-width-wrapper flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8 py-10 lg:py-20"
+    >
+      <figure class="ice-cream">
+        <img src="./images/1.jpg" />
+      </figure>
+      <figure class="ice-cream">
+        <img src="./images/2.jpg" />
+      </figure>
+      <figure class="ice-cream">
+        <img src="./images/3.jpg" />
+      </figure>
+      <figure class="ice-cream">
+        <img src="./images/4.jpg" />
+      </figure>
+      <figure class="ice-cream">
+        <img src="./images/5.jpg" />
+      </figure>
+      <figure class="ice-cream">
+        <img src="./images/6.jpg" />
+      </figure>
+    </main>
   </body>
 </html>
